@@ -10,8 +10,7 @@ st.sidebar.title("Sentiment Analysis of Tweet about US Airlines ")
 st.markdown("This application is a Streamlit dashboard used to analyze the sentiments of Tweets 𝕩")
 st.sidebar.markdown("This application is a Streamlit dashboard used to analyze the sentiments of Tweets 𝕩")
 
-DATA_URL = r"C:\Users\PMLS\OneDrive - Higher Education Commission\Desktop\New Desktop Material\Courses , Learning Content and Material\Create Interactive Dashboards with Streamlit and Python/Tweets.csv"
-
+DATA_URL = r"C:\Users\PMLS\OneDrive - Higher Education Commission\Desktop\New Desktop Material\Courses , Learning Content and Material\Create Interactive Dashboards with Streamlit and Python\project\data\Tweets.csv"
 # @st.cache_data stores the output of this function in Streamlit's cache.
 # It prevents loading and processing the CSV file again every time the app reruns,
 # making the Streamlit app faster and more efficient.
@@ -22,3 +21,18 @@ def load_data():
     return data
 
 data = load_data()
+
+# We use st.write() to display information on a Streamlit web app.
+# st.write(data)
+
+st.sidebar.subheader("Show random tweet")
+random_tweet = st.sidebar.radio('Sentiment', ('positive', 'neutral', 'negative'))
+st.sidebar.markdown(
+    data.query('airline_sentiment ==  @random_tweet')[["text"]]
+        .sample(n=1  )
+        .iat[0,0])
+
+
+
+
+
