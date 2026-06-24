@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-
+import plotly.express as px
 
 
 st.title("Sentiment Analysis of Tweet about US Airlines")
@@ -29,10 +29,10 @@ st.sidebar.subheader("Show random tweet")
 random_tweet = st.sidebar.radio('Sentiment', ('positive', 'neutral', 'negative'))
 st.sidebar.markdown(
     data.query('airline_sentiment ==  @random_tweet')[["text"]]
-        .sample(n=1  )
-        .iat[0,0])
+        .sample(n=1).iat[0 ,0])    
 
-
+st.sidebar.markdown("### Number of tweets by sentiments")
+select = st.sidebar.selectbox("Visulization type" , ['Histogram', 'Pie chart'], key = '1')
 
 
 
