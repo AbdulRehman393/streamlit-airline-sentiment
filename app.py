@@ -47,3 +47,6 @@ if not st.sidebar.checkbox("Hide", True):
     if select == 'Histogram':
         fig = px.bar(sentiment_count, x = 'Sentiment', y ='Tweets', color = 'Tweets', height = 500)
         st.plotly_chart(fig)
+    else:
+        fig = px.pie(sentiment_count, values = 'Tweets', names = 'Sentiment')
+        st.plotly_chart(fig)
