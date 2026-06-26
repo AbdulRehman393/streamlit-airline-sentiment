@@ -11,10 +11,15 @@ st.markdown("This application is a Streamlit dashboard used to analyze the senti
 st.sidebar.markdown("This application is a Streamlit dashboard used to analyze the sentiments of Tweets 𝕩")
 
 DATA_URL = r"C:\Users\PMLS\OneDrive - Higher Education Commission\Desktop\New Desktop Material\Courses , Learning Content and Material\Create Interactive Dashboards with Streamlit and Python\project\data\Tweets.csv"
+
 # @st.cache_data stores the output of this function in Streamlit's cache.
 # It prevents loading and processing the CSV file again every time the app reruns,
 # making the Streamlit app faster and more efficient.
-@st.cache_data(persist = True)
+
+# @st.cache_data(persist=True) keeps the cached data even after the app restarts.
+# Use it when your app is complete and the data changes infrequently.
+
+@st.cache_data
 def load_data():
     data = pd.read_csv(DATA_URL)
     data['tweet_created'] = pd.to_datetime(data['tweet_created'])
@@ -50,3 +55,8 @@ if not st.sidebar.checkbox("Hide", True):
     else:
         fig = px.pie(sentiment_count, values = 'Tweets', names = 'Sentiment')
         st.plotly_chart(fig)
+
+st.sidebar.subheader("When and where are users tweeting from?")
+#st.sidebar.slider("Hour of the day", 0, 23)  # this adds slider   st.sidebar.slider("text", min_value, max_value)
+st.sidebar.number_input("Hour of the day", min_value = 1, max_value = 24)
+
