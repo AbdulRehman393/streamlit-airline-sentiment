@@ -9,6 +9,14 @@
 
 ---
 
+## 🎉 Live Demo
+
+**🚀 [Try the Live Application Here!](https://app-airline-sentiment-8mwwconsnxvhqrfy6yhicz.streamlit.app/)**
+
+The application is now deployed and live. Click the link above to explore the interactive dashboard!
+
+---
+
 ## 📋 About
 
 This is a **modern, interactive web application** built with Streamlit and Python that provides deep insights into customer sentiment across major US airlines through Twitter data analysis. The dashboard offers real-time sentiment visualization, geographic tweet distribution, airline comparison analytics, and word cloud generation—all in an intuitive, user-friendly interface.
@@ -74,7 +82,7 @@ Perfect for **data analysts, business intelligence professionals, and anyone int
 - Python 3.8 or higher
 - pip (Python package manager)
 
-### Installation
+### Installation & Local Setup
 
 1. **Clone the repository**
    ```bash
@@ -87,17 +95,14 @@ Perfect for **data analysts, business intelligence professionals, and anyone int
    pip install -r requirements.txt
    ```
 
-3. **Add your data**
-   - Place your `Tweets.csv` file in the `data/` directory
-   - Update the `DATA_URL` in `app.py` with the correct path if needed
-
-4. **Run the application**
+3. **Run the application locally**
    ```bash
    streamlit run app.py
    ```
 
-5. **View in browser**
-   - Open your browser and navigate to `http://localhost:8501`
+4. **View in browser**
+   - Streamlit will automatically open your browser to `http://localhost:8501`
+   - If not, manually navigate to that URL
 
 ---
 
@@ -136,7 +141,7 @@ streamlit-airline-sentiment/
 
 ### Data Processing Pipeline
 
-1. **Data Loading**: CSV file is loaded and cached using Streamlit's `@st.cache_data` decorator
+1. **Data Loading**: CSV file is loaded from GitHub and cached using Streamlit's `@st.cache_data` decorator
 2. **Timestamp Parsing**: Tweet creation times are converted to datetime format
 3. **Sentiment Analysis**: Data is pre-classified as positive, neutral, or negative
 4. **Visualization**: Multiple visualization types transform data into actionable insights
@@ -160,12 +165,33 @@ streamlit-airline-sentiment/
 
 ---
 
+## 🌐 Deployment
+
+### Streamlit Cloud (Current Deployment)
+
+This project is deployed on **Streamlit Cloud** and is live at:
+```
+https://app-airline-sentiment-8mwwconsnxvhqrfy6yhicz.streamlit.app/
+```
+
+**To deploy your own version:**
+
+1. Push your code to GitHub
+2. Visit [Streamlit Cloud](https://share.streamlit.io/)
+3. Sign up with your GitHub account
+4. Click "New app"
+5. Select your repository: `AbdulRehman393/streamlit-airline-sentiment`
+6. Set main file to `app.py`
+7. Click "Deploy"
+
+---
+
 ## 🔧 Customization
 
 ### Modify Data Source
 Update the `DATA_URL` variable in `app.py`:
 ```python
-DATA_URL = "path/to/your/Tweets.csv"
+DATA_URL = "https://raw.githubusercontent.com/your-username/your-repo/main/data/Tweets.csv"
 ```
 
 ### Add More Airlines
@@ -187,6 +213,16 @@ The application uses Twitter data about US Airlines including:
 - **Sentiment Labels**: Positive, Neutral, Negative
 - **Tweet Information**: Text content, creation timestamp, airline reference, geographic location
 - **Scale**: Comprehensive dataset with thousands of classified tweets
+
+---
+
+## 📜 Course & Certification
+
+This project was developed as part of the **"Create Interactive Dashboards with Streamlit and Python"** course on **Coursera**.
+
+- **Learning Path**: Data Analysis & Visualization
+- **Duration**: 2-hour hands-on project
+- **Certification**: [View on Coursera](#)
 
 ---
 
@@ -212,6 +248,7 @@ This project is open source and available under the MIT License.
 
 **Abdul Rehman**
 - GitHub: [@AbdulRehman393](https://github.com/AbdulRehman393)
+- LinkedIn: [Add your LinkedIn profile]
 - Portfolio: Check out my other projects on GitHub
 
 ---
@@ -221,6 +258,7 @@ This project is open source and available under the MIT License.
 - Data sourced from Twitter (now X) API
 - Dashboard built with [Streamlit](https://streamlit.io/)
 - Visualizations powered by [Plotly](https://plotly.com/) and [Matplotlib](https://matplotlib.org/)
+- Course: [Create Interactive Dashboards with Streamlit and Python](https://www.coursera.org/learn/create-interactive-dashboards-with-streamlit-and-python)
 
 ---
 
@@ -237,5 +275,7 @@ If you have any questions or need assistance:
 **Made with ❤️ by Abdul Rehman**
 
 [⭐ Star this repository if you found it helpful!](https://github.com/AbdulRehman393/streamlit-airline-sentiment)
+
+[🚀 Try the Live App](https://app-airline-sentiment-8mwwconsnxvhqrfy6yhicz.streamlit.app/)
 
 </div>
