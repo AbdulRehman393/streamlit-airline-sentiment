@@ -12,7 +12,7 @@ st.sidebar.title("Sentiment Analysis of Tweet about US Airlines ")
 st.markdown("This application is a Streamlit dashboard used to analyze the sentiments of Tweets 𝕩")
 st.sidebar.markdown("This application is a Streamlit dashboard used to analyze the sentiments of Tweets 𝕩")
 
-DATA_URL = r"DATA_URL = "https://raw.githubusercontent.com/AbdulRehman393/streamlit-airline-sentiment/main/data/Tweets.csv"
+DATA_URL = "https://raw.githubusercontent.com/AbdulRehman393/streamlit-airline-sentiment/main/data/Tweets.csv"
 
 # @st.cache_data stores the output of this function in Streamlit's cache.
 # It prevents loading and processing the CSV file again every time the app reruns,
