@@ -248,7 +248,7 @@ This project is open source and available under the MIT License.
 
 **Abdul Rehman**
 - GitHub: [@AbdulRehman393](https://github.com/AbdulRehman393)
-- LinkedIn: [Add your LinkedIn profile]
+- LinkedIn: in/khawaja-abdul-rehman-24088b266
 - Portfolio: Check out my other projects on GitHub
 
 ---
