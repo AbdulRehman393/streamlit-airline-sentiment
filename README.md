@@ -53,6 +53,11 @@ Perfect for **data analysts, business intelligence professionals, and anyone int
   - Explore individual tweets by sentiment category
   - Understand real customer feedback and experiences
 
+- **📥 Custom CSV Uploads**
+  - Analyze another tweet CSV without replacing the bundled dataset
+  - Supports `text`, `tweet`, `tweet_text`, `full_text`, `content`, `body`, or `Tweets` as the tweet text column
+  - Uses optional sentiment, airline, timestamp, and map columns when present
+
 ---
 
 ## 🖼️ Project Demo
@@ -194,6 +199,9 @@ Update the `DATA_URL` variable in `app.py`:
 DATA_URL = "https://raw.githubusercontent.com/your-username/your-repo/main/data/Tweets.csv"
 ```
 
+### Upload Another CSV
+Use the sidebar uploader to analyze another tweet CSV at runtime. Uploads are limited to 2 MB and 5000 rows so the dashboard stays responsive.
+
 ### Add More Airlines
 Edit the airline selection in the sidebar:
 ```python
@@ -222,7 +230,7 @@ This project was developed as part of the **"Create Interactive Dashboards with 
 
 - **Learning Path**: Data Analysis & Visualization
 - **Duration**: 2-hour hands-on project
-- **Certification**: [View on Coursera](#)
+- **Certification**: Coursera guided project certificate
 
 ---
 
@@ -258,7 +266,7 @@ This project is open source and available under the MIT License.
 - Data sourced from Twitter (now X) API
 - Dashboard built with [Streamlit](https://streamlit.io/)
 - Visualizations powered by [Plotly](https://plotly.com/) and [Matplotlib](https://matplotlib.org/)
-- Course: [Create Interactive Dashboards with Streamlit and Python](https://www.coursera.org/learn/create-interactive-dashboards-with-streamlit-and-python)
+- Course: Create Interactive Dashboards with Streamlit and Python
 
 ---
 
